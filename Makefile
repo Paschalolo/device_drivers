@@ -9,6 +9,6 @@ all:
 
 clean:
 	$(MAKE) -C $(KDIR) M=$(PWD) clean
-
+	cp ./extra/compile_commands.json .
 push : 
 	git add . && git commit -m "message" && git push origin main
