@@ -1,4 +1,5 @@
 
+
 obj-m += src/$(FILE).o
 
 KDIR := /lib/modules/$(shell uname -r)/build
@@ -12,3 +13,6 @@ clean:
 	cp ./extra/compile_commands.json .
 push : 
 	git add . && git commit -m "message" && git push origin main
+
+create : 
+	touch src/$(FILE).c
